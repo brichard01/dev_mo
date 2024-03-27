@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 
 class FeedbackActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,6 +18,50 @@ class FeedbackActivity : AppCompatActivity() {
         var a = findViewById<TextView>(R.id.textView3)
         val name1 = intent.getStringExtra("name1")
         a.text = name1
+
+        //Gestion du bouton selectionne
+        val di1 = findViewById<Button>(R.id.buttonDi1)
+        val di2 = findViewById<Button>(R.id.buttonDi2)
+        val di3 = findViewById<Button>(R.id.buttonDi3)
+        val do1 = findViewById<Button>(R.id.buttonDo1)
+        val do2 = findViewById<Button>(R.id.buttonDo2)
+        val do3 = findViewById<Button>(R.id.buttonDo3)
+
+        di1.setOnClickListener{
+            di1.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            di2.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            di3.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+        }
+
+        di2.setOnClickListener{
+            di1.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            di2.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            di3.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+        }
+
+        di3.setOnClickListener{
+            di1.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            di2.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            di3.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
+
+        do1.setOnClickListener{
+            do1.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            do2.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            do3.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+        }
+
+        do2.setOnClickListener{
+            do1.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            do2.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            do3.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+        }
+
+        do3.setOnClickListener{
+            do1.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            do2.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            do3.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+        }
 
         //Lorsqu'on appuie sur le bouton
         val button = findViewById<Button>(R.id.buttonFB)
