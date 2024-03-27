@@ -33,6 +33,11 @@ class FeedbackActivity : AppCompatActivity() {
                 intent.putExtra("name1", name2)
                 startActivity(intent)
             }
+            //Sinon on retourne au début
+            else{
+                val intent = Intent(this, InfoActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
