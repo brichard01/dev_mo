@@ -16,7 +16,7 @@ class FeedbackActivity : AppCompatActivity() {
         var a = findViewById<TextView>(R.id.textView3)
         val name1 = intent.getStringExtra("name1")
         val name2 = intent.getStringExtra("name2")
-        a.text = name1 + name2
+        a.text = name1
 
         val button = findViewById<Button>(R.id.buttonFB)
         button.setOnClickListener(){

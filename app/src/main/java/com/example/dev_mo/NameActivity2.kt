@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 
 class NameActivity2 : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -20,7 +21,7 @@ class NameActivity2 : AppCompatActivity() {
             val intent = Intent(this, FeedbackActivity::class.java)
             intent.putExtra("n", 2)
             intent.putExtra("name1", name1)
-            intent.putExtra("name1", name2)
+            intent.putExtra("name2", name2)
             startActivity(intent)
         }
     }
