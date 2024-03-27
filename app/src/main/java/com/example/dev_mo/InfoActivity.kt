@@ -22,14 +22,14 @@ class InfoActivity : AppCompatActivity() {
         //Echange du nombre selectionné
         button1.setOnClickListener{
             nb = 1
-            button1.setBackgroundColor(0)
-            button2.setBackgroundColor(1)
+            button1.setBackgroundColor(@color/red)
+            button2.setBackgroundColor(@color/lightred)
         }
 
         button2.setOnClickListener{
             nb = 2
-            button1.setBackgroundColor(1)
-            button2.setBackgroundColor(0)
+            button1.setBackgroundColor(@color/lightred)
+            button2.setBackgroundColor(@color/red)
         }
 
         //Lorsqu'on confirme
