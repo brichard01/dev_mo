@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="OK"
         style="@style/OKTextStyle"
-        android:background="@color/red"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.core.content.ContextCompat
 
 class InfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,14 +23,14 @@ class InfoActivity : AppCompatActivity() {
         //Echange du nombre selectionné
         button1.setOnClickListener{
             nb = 1
-            button1.setBackgroundColor(@color/red)
-            button2.setBackgroundColor(@color/lightred)
+            button1.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+            button2.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
         }
 
         button2.setOnClickListener{
             nb = 2
-            button1.setBackgroundColor(@color/lightred)
-            button2.setBackgroundColor(@color/red)
+            button1.setBackgroundColor(ContextCompat.getColor(this, R.color.lightred))
+            button2.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
         }
 
         //Lorsqu'on confirme
