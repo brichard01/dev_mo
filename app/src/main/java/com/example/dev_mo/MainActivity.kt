@@ -1,3 +1,6 @@
+//FICHIER INUTILE LE VRAI MAIN EST InfoActivity
+
+
 package com.example.a2727
 
 import android.content.Intent
