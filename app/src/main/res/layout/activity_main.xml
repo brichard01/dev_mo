@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informations"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combien de personnes suivront les exercices?"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="188dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="337dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="492dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
