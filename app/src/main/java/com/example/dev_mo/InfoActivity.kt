@@ -10,16 +10,16 @@ class InfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
+        //Nombre de participants (defaut 1)
         var nb = 1
 
         //Bouttons
-
         val buttonConfirm = findViewById<Button>(R.id.confirm)
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
 
-        //Listeners
 
+        //Echange du nombre selectionné
         button1.setOnClickListener{
             nb = 1
             button1.setBackgroundColor(0)
@@ -32,10 +32,14 @@ class InfoActivity : AppCompatActivity() {
             button2.setBackgroundColor(0)
         }
 
+        //Lorsqu'on confirme
         buttonConfirm.setOnClickListener {
+
+            //On lance soit l'activité à une ou deux entrées
             if (nb==1){
                 val intent = Intent(this, NameActivity::class.java)
                 startActivity(intent)
+
             }else{
                 val intent = Intent(this, NameActivity2::class.java)
                 startActivity(intent)

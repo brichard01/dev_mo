@@ -13,16 +13,23 @@ class FeedbackActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feedback)
 
+        //On affiche le nom de celui qui donne le feedback
         var a = findViewById<TextView>(R.id.textView3)
         val name1 = intent.getStringExtra("name1")
-        val name2 = intent.getStringExtra("name2")
         a.text = name1
 
+        //Lorsqu'on appuie sur le bouton
         val button = findViewById<Button>(R.id.buttonFB)
         button.setOnClickListener(){
+            //On regarde si il faut lancer un deuxieme feedback
             if (intent.getIntExtra("n", 1)==2){
+
+                //On recupere le deuxieme prenom
                 val name2 = intent.getStringExtra("name2")
+
+                //On relance une fois avec le deuxieme prenom
                 val intent = Intent(this, FeedbackActivity::class.java)
+                intent.putExtra("n", 1)
                 intent.putExtra("name1", name2)
                 startActivity(intent)
             }
